@@ -14,8 +14,6 @@ export default function decorate(block) {
     video.setAttribute('width', '960');
     video.setAttribute('height', '540');
     block.append(video);
-
+    <script src="https://players.brightcove.net/1507807800001/rf1BTdKk6M_default/index.min.js"></script>
 
 }
-
-<script src="https://players.brightcove.net/1507807800001/rf1BTdKk6M_default/index.min.js"></script>
