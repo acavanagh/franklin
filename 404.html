@@ -13,21 +13,21 @@
   <script type="module">
     import { sampleRUM } from '/scripts/lib-franklin.js';
 
-    window.addEventListener('load', () => {
-      if (document.referrer) {
-        const { origin, pathname } = new URL(document.referrer);
-        if (origin === window.location.origin) {
-          const backBtn = document.createElement('a');
-          backBtn.classList.add('button', 'error-button-back');
-          backBtn.href = pathname;
-          backBtn.textContent = 'Go back';
-          backBtn.title = 'Go back';
-          const btnContainer = document.querySelector('.button-container');
-          btnContainer.append(backBtn);
-        }
-      }
-      sampleRUM('404', { source: document.referrer, target: window.location.href });
-    });
+    // window.addEventListener('load', () => {
+    //   if (document.referrer) {
+    //     const { origin, pathname } = new URL(document.referrer);
+    //     if (origin === window.location.origin) {
+    //       const backBtn = document.createElement('a');
+    //       backBtn.classList.add('button', 'error-button-back');
+    //       backBtn.href = pathname;
+    //       backBtn.textContent = 'Go back';
+    //       backBtn.title = 'Go back';
+    //       const btnContainer = document.querySelector('.button-container');
+    //       btnContainer.append(backBtn);
+    //     }
+    //   }
+    //   sampleRUM('404', { source: document.referrer, target: window.location.href });
+    // });
   </script>
   <link rel="stylesheet" href="/styles/styles.css">
   <style>
@@ -52,13 +52,14 @@
   <header></header>
   <main class="error">
     <div class="section">
-      <svg viewBox="1 0 38 18" class="error-number">
-        <text x="0" y="17">404</text>
-      </svg>
-      <h2 class="error-message">Page Not Found</h2>
-      <p class="button-container">
-        <a href="/" class="button secondary error-button-home">Go home</a>
-      </p>
+      <div class=" helix-layout-container">
+        <div class="page-title">
+          <h1>Uh oh! Something went wrong. </h1>
+        </div>
+        <div class="error-content">You may have reached this page by mistake or the page you requested no longer exists. Please double-check your URL or make your move back to the homepage to learn more about CIBINQO. </div><a class="back-to-home" href="/">Back to home</a>
+        <div class="error-content">For a quicker look around, select a topic you’d like to learn more about from here: </div>
+        <div class="main-content"><a href="/how-cibinqo-works">How CIBINQO<br> Works</a><a href="/before-and-after">Before &amp; After <br>Photos</a><a href="/savings-and-support-overview">Savings &amp; Support <br> Overview</a></div>
+        <p class="contact-us">If you need additional assistance, please <a href="https://www.pfizer.com/contact" target="_blank">contact us</a>. </p>
     </div>
   </main>
   <footer></footer>

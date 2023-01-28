@@ -5,7 +5,11 @@ import { readBlockConfig, decorateIcons } from '../../scripts/lib-franklin.js';
  * @param {Element} block The header block element
  */
 export default async function decorate(block) {
+  
+
+
   const config = readBlockConfig(block);
+  console.log(config);
   block.textContent = '';
 
   // fetch nav content

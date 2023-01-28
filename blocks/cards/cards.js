@@ -1,7 +1,9 @@
-import { createOptimizedPicture } from '../../scripts/lib-franklin.js';
+import { createOptimizedPicture, readBlockConfig } from '../../scripts/lib-franklin.js';
 
 export default function decorate(block) {
   /* change to ul, li */
+  const config = readBlockConfig(block);
+  console.log(config);
   const ul = document.createElement('ul');
   [...block.children].forEach((row) => {
     const li = document.createElement('li');

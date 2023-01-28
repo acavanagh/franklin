@@ -204,10 +204,11 @@ export function decorateBlock(block) {
 export function readBlockConfig(block) {
   const config = {};
   block.querySelectorAll(':scope>div').forEach((row) => {
-    if (row.children) {
+    if (row.children) {      
       const cols = [...row.children];
       if (cols[1]) {
         const col = cols[1];
+        console.log(cols[0])
         const name = toClassName(cols[0].textContent);
         let value = '';
         if (col.querySelector('a')) {
